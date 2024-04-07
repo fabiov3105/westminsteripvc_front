@@ -1,19 +1,21 @@
-{{define "NewPeopleSimple"}}
+{{define "UpdatePeopleSimple"}}
 {{template "_head"}}
 {{template "_menu"}}
-    <div class="container">
-        <div class="jumbotron jumbotron-fluid mb-2">
+    <div class="container mb-5">
+        <div class="jumbotron jumbotron-fluid mb-4">
             <div class="container">
-                <h1 class="display-9">Cadastro Simplificado de Pessoa</h1>
-                <p class="lead">Insira os dados</p>
+                <h1 class="display-5">Alteração Simplificada de Pessoa</h1>
+                <p class="lead">Altere os dados</p>
             </div>
         </div>
-        <form method="POST" action="InsertNewPeopleSimple">
+        <form method="POST" action="UpdatePeopleSimpleExec">
+            {{range .}}
+            <input type="hidden" name="id" value="{{.Id}}">
             <div class="row">
                 <div class="col-sm-8">
                     <div class="form-group">
-                        <label for="Nome">Nome:</label>
-                        <input type="text" name="name" class="form-control" oninput="this.value = this.value.toUpperCase()">
+                        <label for="Nome">Nome:</label> 
+                        <input type="text" name="name" class="form-control" oninput="this.value = this.value.toUpperCase()" value="{{.Name}}">
                     </div>
                 </div>
             </div>
@@ -21,9 +23,7 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="quantidade">Nº Cartão de Oferta:</label>
-                        {{range .}}
-                        <input type="number" name="financialnumber" class="form-control" value="{{.FinancialNumber}}">
-                        {{end}}
+                        <input type="text" name="financialnumber" class="form-control" value="{{.FinancialNumber}}">
                     </div>
                 </div>
             </div>
@@ -31,13 +31,15 @@
                 <div class="form-group">
                 <label for="quantidade">Seleciona o local que congrega:</label><br>
                 <select class="form-group" aria-label="Default select example" name="location">
+                    <option value="{{.Location}}">{{.Location}}</option>
                     <option value="Sede">Sede</option>
                     <option value="Congregacao">Congregação</option>
                   </select>
                 </div>
             </div>
-            <button type="submit" value="salvar" class="btn btn-success">Salvar</button>
+            <button type="submit" value="salvar" class="btn btn-success">Atualiar</button>
             <a class="btn btn-info" href="/peoplesimple">Voltar</a>
+            {{end}}
         </form>
 </div>
 </body>

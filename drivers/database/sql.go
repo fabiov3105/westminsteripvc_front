@@ -1,21 +1,17 @@
 package database
 
 import (
-	"log"
+	"database/sql"
 
-	"gorm.io/driver/postgres"
-	"gorm.io/gorm"
+	_ "github.com/lib/pq"
 )
 
-var (
-	DB  *gorm.DB
-	err error
-)
-
-func ConectDB() {
+// banco de dados
+func ConectDB() *sql.DB {
 	stringDeConexao := "host=localhost user=admin password=admin dbname=westiminster_db port=5432 sslmode=disable"
-	DB, err = gorm.Open(postgres.Open(stringDeConexao))
+	db, err := sql.Open("postgres", stringDeConexao)
 	if err != nil {
-		log.Panic("Erro ao conectar com banco de dados")
+		panic(err.Error)
 	}
+	return db
 }
