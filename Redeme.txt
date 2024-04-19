@@ -1,0 +1,132 @@
+Plano de Desenvolvimento Sistema Wesminster IPVC Front
+
+Lista Simples de Pessoas (location !='NaoCongrega')
+	Lista Ativos
+	Lista Inativos
+	Lista todos
+		Cadastro Simple de Pessoas (Nome, número do cartão de oferta, Local que congrega
+		Edição
+		Ativa
+		Desativa
+
+-------------------------
+A Fazer
+(Secretária) + (Diácono)
+Lista de pessoas (location !='NaoCongrega')
+	Lista Ativos
+	Lista Inativos
+	Lista todos
+		Cadastro Completo
+		Edição
+		Ativa
+		Desativa
+
+(Secretária)		
+Lista de pessoas (Fornecedor - location ='NaoCongrega')
+	Lista Ativos
+	Lista Inativos
+	Lista todos
+		Cadastro Completo
+		Edição
+		Ativa
+		Desativa
+
+(Secretária)
+Lista de Fonecedor Empresa (Tabela fornecedor)
+	Lista de fornecedores ativos
+	Lista de fornecedores Inativos
+	Lista de fornecedores Totos
+		Cadastro de fornecedor
+		Edição
+		Ativa
+		Desativa
+
+----
+(Secretária)
+Link de pessoas como Membro
+	Lista de membros Ativos
+	Lista de membros Inativos
+	Lista de membros Totos
+		Link de pessoa a Membro
+		Edição
+		Ativa
+		Desativa
+		
+----
+(Diácono)
+Lançamento de Ofertas / Dizimo
+	Cadastro de Dizimo e Ofertas
+	Lista das ofertas do dia
+	Edição da Ofertas
+	(Tesoureiro)
+	Relatório das ofertas por intervalo
+	Relatório das ofertas por pessoa
+
+----
+(Secretária)
+Lançamento de recibo
+	Cadastro de recibo
+	Vincula Pessoa a Emissão de recibo
+	impressão do recibo
+	lista de recibo por pessoa
+	lista de recibo por periodo
+	
+----
+(Secretária)
+Lançamento de Saidas
+	Cadastro de Tipos de Saida
+	Lançamento de notas
+	Lançamento de Outras saidas
+	(Tesoureiro)
+	Lista de previsão de saida por periodo
+	
+----
+(Tesoureiro) + (Presbitero)
+Gestão financeira
+	
+	Lançamentos extras de entradas
+	Lançamentos extras de saidas
+	Relatório de entradas e saidas
+
+	(Secretária) + (Tesoureiro) + (Presbitero)
+	Relatórios Contábeis
+	
+------------------------------------------
+(Superintendencia) + (Secretária) + (Secretaria Escola Dominical)
+Gestão da Escola dominical
+	Cadastro das classes
+	Cadastro das Revistas
+	Cadastro das Aulas
+		será informado os dias que terão aulas e os dias que serão classe única
+	Cadastro dos Alunos na Classe
+	Cadastro das Frequencias nas Classes
+	
+	Acompanhamento de presença 
+		por classe
+		Por Pessoa
+		
+	Lista das classes
+		Edição
+		Ativas
+		Inativas
+		Ativa e desativa
+		
+	Lista das revistas
+		Edição
+		Ativas
+		Inativas
+		Ativa e desativa
+
+Gestão de Grupo familiar
+	Cadastro dos Grupos
+	Cadastro dos Estudos
+	Cadastro dos Encontros
+	Vinculo dos Participantes do Grupos
+	Cadastro das Participações
+	
+(Admin)
+Gestão de Acesso
+	Liberação de acesso ao sistema
+	Remoção de acesso ao sistema
+	Alteração de acesso ao sistema
+	

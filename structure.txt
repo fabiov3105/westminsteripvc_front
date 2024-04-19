@@ -1,0 +1,42 @@
+Plano de Desenvolvimento Sistema Wesminster IPVC Front
+
+people
+--> people_full_information
+--> people_issue_receipt (Vinculo pessoa emite recibo)
+--> people/people_receipt (recibo)
+--> people/people_supplier (fornecedor / location ='NaoCongrega')
+
+supplier (fornecedor)
+--> supplier/supplier_register (Registro de fornecedor)
+--> supplier/supplier_launch (Lançamentos das notas)
+
+member
+--> member/members_link (Link de pessoa a membros)
+
+offers (Ofertas)
+--> offers/offers_launch
+--> offers/list_offers
+
+release_exits (Lançamentos das saidas)
+--> release_exits
+
+
+financial management
+--> financial_management
+
+accounting
+--> accounting_reports
+	
+Sunday School Management
+--> sunday_school_management
+    --> room_management
+    --> management_magazines
+    --> class_management (Gestão das Aulas)
+
+Family Group Management
+--> family_group_anagement
+
+Access Management
+--> access_management
+
+	
