@@ -21,6 +21,23 @@ release_exits (Lançamentos das saidas)
 --> release_exits
 
 
+--> people_receipt (recibo)
+--> people_supplier (fornecedor / location ='NaoCongrega')
+
+supplier (fornecedor)
+--> supplier_register (Registro de fornecedor)
+--> supplier_launch (Lançamentos das notas)
+
+member
+--> members_link (Link de pessoa a membros)
+
+offers (Ofertas)
+--> offers_launch
+--> list_offers
+
+release of exits (Lançamentos das saidas)
+--> release_exits
+
 financial management
 --> financial_management
 

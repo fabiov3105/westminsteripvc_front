@@ -19,7 +19,7 @@ type PeopleSimple struct {
 func SelectPeopleSimple() []PeopleSimple {
 	db := database.ConectDB()
 	// selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples order by financial_number desc limit 5;")
-	selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples order by name asc;")
+	selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where location !='NaoCongrega' order by name asc;")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -52,7 +52,7 @@ func SelectPeopleSimple() []PeopleSimple {
 func SelectPeopleSimpleenabled() []PeopleSimple {
 	db := database.ConectDB()
 	// selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where enabled='true' order by financial_number desc limit 5;")
-	selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where enabled='true' order by name asc;")
+	selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where enabled='true' and location !='NaoCongrega' order by name asc;")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -85,7 +85,7 @@ func SelectPeopleSimpleenabled() []PeopleSimple {
 func SelectPeopleSimpledisabled() []PeopleSimple {
 	db := database.ConectDB()
 	// selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where enabled='false' order by financial_number desc limit 5;")
-	selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where enabled='false' order by name asc;")
+	selectPeopleSimple, err := db.Query("select id, name, financial_number, location, enabled from peoples where enabled='false' and location !='NaoCongrega' order by name asc;")
 	if err != nil {
 		panic(err.Error())
 	}
